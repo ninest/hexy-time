@@ -15,21 +15,32 @@
     font-size: 13vw;
 
     display: flex;
+    // puts hash and time in row
 
     &-value {
       color: white;
 
+      display: flex;
+      // to put characters in time string in row
+      align-items: center;
+
       &-character {
-        display: inline-block;
         width: 1.2ch;
         text-align: center;
       }
     }
 
-    // For hash and colon
-    .gray {
+    .hash,
+    .colon {
       color: lightgray;
       opacity: 0.85;
+    }
+    .colon {
+      opacity: 0.65;
+      width: 0.8ch;
+
+      // move colon up a bit to make it look more normal
+      padding-bottom: 2vw;
     }
   }
 }

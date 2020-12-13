@@ -23,18 +23,18 @@ function App() {
   return (
     <div className="clock" style={{ backgroundColor: `#${time.hex}` }}>
       <div className="clock-time" onClick={() => setShowHex(!showHex)}>
-        {showHex ? <div className="gray">#</div> : null}
+        {showHex ? <div className="hash">#</div> : null}
         <div className="clock-time-value">
           {(showHex ? time.hex : time.normal).split("").map((value, index) => {
             return (
-              <span
+              <div
                 className={
-                  "clock-time-value-character " + (value === ":" ? "gray" : "")
+                  "clock-time-value-character " + (value === ":" ? "colon" : "")
                 }
                 key={index}
               >
                 {value}
-              </span>
+              </div>
             );
           })}
         </div>
