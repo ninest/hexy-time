@@ -3,10 +3,13 @@ import getTime from "./hex-time";
 
 function App() {
   const [showHex, setShowHex] = useState<boolean>(true);
-  const [time, setTime] = useState<{ normal: string; hex: string }>({
-    normal: "",
-    hex: "",
-  });
+  const [time, setTime] = useState<{ normal: string; hex: string }>(
+    getTime(new Date())
+    //   {
+    //   normal: "",
+    //   hex: "",
+    // }
+  );
 
   useEffect(() => {
     // Start clock tick
