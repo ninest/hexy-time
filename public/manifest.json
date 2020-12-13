@@ -1,0 +1,9 @@
+{
+  "name": "Hex Time",
+  "version": "0.1.0",
+  "description": "Time as a color",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}

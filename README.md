@@ -26,6 +26,16 @@ Run `yarn build` to compile and build the web app.
 - Development: `vc`
 - Production: `vc --prod`
 
+## Extension
+
+Create a `.env file`:
+
+```env
+INLINE_RUNTIME_CHUNK=false
+```
+
+Run `yarn build`, then load the `build/` directory as an unpacked extension.
+
 ### TS errors
 
 - Reload VScode so it can detect changes

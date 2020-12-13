@@ -24,7 +24,7 @@ function getTime(date: Date): Time {
   Ratio of current time to hex
   - from 0 (000000) to 16777215 (FFFFFF)
   */
-  const hexRatio = Math.round(timeRatio * 16777215);
+  const hexRatio = Math.round(timeRatio * (Math.pow(256, 3) - 1));
 
   /* 
   Times to display
