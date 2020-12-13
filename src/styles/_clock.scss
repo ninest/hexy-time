@@ -1,0 +1,32 @@
+.clock {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* initial background color */
+  background-color: black;
+
+  transition: 1s all;
+
+  &-time {
+    font-weight: 900;
+    font-size: 13vw;
+
+    display: flex;
+
+    &-hash {
+      color: gray;
+    }
+    &-value {
+      color: white;
+
+      &-character {
+        display: inline-block;
+        width: 1.2ch;
+        text-align: center;
+      }
+    }
+  }
+}
