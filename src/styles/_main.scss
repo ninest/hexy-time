@@ -1,0 +1,55 @@
+main {
+  .three-dot {
+    // put higher than clock
+    position: relative;
+    z-index: 10;
+
+    padding: 1rem;
+
+    display: flex;
+    justify-content: flex-end;
+
+    .three-dot-button {
+      opacity: 0.6;
+
+      &:hover, &:focus {
+        opacity: unset;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 6rem;
+      right: 1rem;
+
+      padding: 1rem;
+      border-radius: 1rem;
+
+      background-color: var(--menu);
+
+      backdrop-filter: blur(5px);
+
+      &-item {
+        display: block;
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        color: var(--menu-item-text);
+        font-weight: 600;
+        text-decoration: none;
+
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+
+        &:hover {
+          background-color: var(--menu-item-bg-hover);
+        }
+        &:focus {
+          outline: none;
+          background-color: var(--menu-item-bg-focus);
+        }
+      }
+    }
+  }
+}

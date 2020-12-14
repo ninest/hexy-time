@@ -1,48 +1,41 @@
-import React, { useEffect, useState } from "react";
-import getTime from "./hex-time";
+import React, { useState } from "react";
+import Clock from "./components/Clock";
 
 function App() {
-  const [showHex, setShowHex] = useState<boolean>(true);
-  const [time, setTime] = useState<{ normal: string; hex: string }>(
-    getTime(new Date())
-    //   {
-    //   normal: "",
-    //   hex: "",
-    // }
-  );
-
-  useEffect(() => {
-    // Start clock tick
-    const tick = setInterval(() => {
-      setTime(getTime(new Date()));
-    }, 1000);
-
-    return () => {
-      // Clear interval on component unmount
-      clearInterval(tick);
-    };
-  });
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="clock" style={{ backgroundColor: `#${time.hex}` }}>
-      <div className="clock-time" onClick={() => setShowHex(!showHex)}>
-        {showHex ? <div className="hash">#</div> : null}
-        <div className="clock-time-value">
-          {(showHex ? time.hex : time.normal).split("").map((value, index) => {
-            return (
-              <div
-                className={
-                  "clock-time-value-character " + (value === ":" ? "colon" : "")
-                }
-                key={index}
-              >
-                {value}
-              </div>
-            );
-          })}
-        </div>
+    // Close menu (if open) when anything clicked
+    <main onClick={() => (showMenu ? setShowMenu(false) : null)}>
+      <Clock />
+      <div className="three-dot">
+        <button
+          className="three-dot-button button button-icon"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+            <path d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z" />
+          </svg>
+        </button>
+        {showMenu && (
+          <div className="menu">
+            <div className="menu-item" tabIndex={1}>
+              Share
+            </div>
+
+            <a
+              tabIndex={1}
+              href="https://github.com/ninest/hexy-time"
+              target="_blank"
+              rel="noreferrer"
+              className="menu-item"
+            >
+              GitHub
+            </a>
+          </div>
+        )}
       </div>
-    </div>
+    </main>
   );
 }
 

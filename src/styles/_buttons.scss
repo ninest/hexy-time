@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  text-decoration: none;
+
+  &-icon {
+    background: transparent;
+    fill: var(--icon-button);
+    svg {
+      height: 2rem;
+    }
+  }
+
+  transition: 0.1s all;
+
+  &:hover {
+    background: var(--icon-button-hover);
+  }
+
+  &:focus {
+    outline: none;
+    background: var(--icon-button-hover);
+  }
+}
