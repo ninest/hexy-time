@@ -6,7 +6,9 @@ function Menu() {
 
   async function share() {
     setShowMenu(false);
-    await shareImage();
+    setTimeout(() => {
+      shareImage();
+    }, 100);
   }
 
   return (
