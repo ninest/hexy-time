@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { shareImage } from "./share";
+import { shareImage } from "../share";
 
 function Menu() {
   const [showMenu, setShowMenu] = useState(false);

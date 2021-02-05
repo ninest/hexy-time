@@ -1,9 +1,28 @@
 {
   "name": "Hex Time",
+  "short_name": "Hex Time",
   "version": "0.1.0",
   "description": "Time as a color",
   "manifest_version": 2,
   "chrome_url_overrides": {
     "newtab": "index.html"
-  }
+  },
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#222222",
+  "background_color": "#222222",
+  "icons": [
+    {
+      "src": "icon1/manifest-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icon1/manifest-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
 }

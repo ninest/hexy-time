@@ -21,6 +21,16 @@ to start a development server.
 
 Run `yarn build` to compile and build the web app.
 
+### Generating icons
+
+Using [`pwa-asset-generator`](https://github.com/onderceylan/pwa-asset-generator) to generate icons for Android, iOS, and iOS splashscreen.
+
+```bash
+pwa-asset-generator icon.png -b "linear-gradient(139.62deg, #FFE74C 4.35%, #6BF178 70.81%, #35A7FF 97.49%)" ./icon1
+```
+
+Change `icon1` to `icon-N` to ensure that the browser picks up the latest icons if changed.
+
 ### Hosting
 
 - Development: `vc`
