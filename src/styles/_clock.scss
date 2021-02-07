@@ -1,3 +1,10 @@
+body {
+  /* initial background color */
+  background-color: black;
+
+  transition: 2s all;
+}
+
 .clock {
   position: absolute;
   top: 0;
@@ -9,11 +16,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* initial background color */
-  background-color: black;
-
-  transition: 2s all;
 
   &-time {
     font-weight: 900;

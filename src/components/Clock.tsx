@@ -19,8 +19,13 @@ function Clock() {
     };
   });
 
+  useEffect(() => {
+    // style={{ backgroundColor: `#${time.hex}` }}
+    document.body.style.backgroundColor = `#${time.hex}`
+  }, [time.hex]);
+
   return (
-    <div className="clock" style={{ backgroundColor: `#${time.hex}` }}>
+    <div className="clock" >
       <div className="clock-time" onClick={() => setShowHex(!showHex)}>
         {showHex ? <div className="hash">#</div> : null}
         <div className="clock-time-value">
@@ -42,4 +47,4 @@ function Clock() {
   );
 }
 
-export default Clock
+export default Clock;
