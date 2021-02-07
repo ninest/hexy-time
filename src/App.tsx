@@ -5,7 +5,7 @@ function App() {
   return (
     <main>
       <Clock />
-      <Menu />
+      {/* <Menu /> */}
     </main>
   );
 }
