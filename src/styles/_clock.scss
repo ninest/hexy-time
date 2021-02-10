@@ -37,12 +37,12 @@ body {
       }
 
       transition: 2s all;
+      text-shadow: 0 0 2px #fff, 0 0 10px #fff;
     }
 
     &-glow {
       transition: 2s all;
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px #fff, 0 0 30px #fff
-        ;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px #fff, 0 0 30px #fff;
     }
 
     .hash,
