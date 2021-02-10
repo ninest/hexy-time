@@ -19,8 +19,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "BUILD_TIME=`date +%y.%m.%d.%H.%M`; REACT_APP_BUILD_TIME=$BUILD_TIME react-scripts start",
+    "build": "BUILD_TIME=`date +%y.%m.%d.%H.%M`; REACT_APP_BUILD_TIME=$BUILD_TIME react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -43,6 +43,10 @@ function Menu() {
           >
             GitHub
           </a>
+
+          <div className="menu-item menu-item-version">
+            {process.env.REACT_APP_BUILD_TIME}
+          </div>
         </div>
       )}
     </div>
