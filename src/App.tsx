@@ -17,7 +17,7 @@ function App() {
 
           setTimeout(() => {
             setTextGlow(false);
-          }, 3500);
+          }, 2500);
         })
         .catch(() => {
           console.log("No wake lock");
