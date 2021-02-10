@@ -14,4 +14,12 @@ ReactDOM.render(
 // Learn more about service workers: https://cra.link/PWA
 process.env.NODE_ENV === "development"
   ? serviceWorkerRegistration.unregister()
-  : serviceWorkerRegistration.register();
+  : serviceWorkerRegistration.register({
+      onUpdate: (registration) => {
+        console.log("An update is available!")
+        if (registration && registration.waiting) {
+          registration.waiting.postMessage({ type: "SKIP_WAITING" });
+        }
+        // window.location.reload();
+      },
+    });
