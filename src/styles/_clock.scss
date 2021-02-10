@@ -35,6 +35,14 @@ body {
         width: 1.2ch;
         text-align: center;
       }
+
+      transition: 2s all;
+    }
+
+    &-glow {
+      transition: 2s all;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #fff,
+        0 0 40px #fff;
     }
 
     .hash,
