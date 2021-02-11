@@ -3,7 +3,7 @@
 > 🕘 Time as a color
 
 <p align="center">
-  <img src="demo.gif" alt="Demo" />
+  <img src="assets/movie.gif" alt="Demo" />
 </p>
 
 ## ⚙️ Build setup
