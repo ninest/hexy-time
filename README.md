@@ -6,7 +6,7 @@
   <img src="assets/movie.gif" alt="Demo" />
 </p>
 
-## ⚙️ Build setup
+## Build setup
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
