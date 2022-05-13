@@ -1,4 +1,4 @@
-# [Hexy Time](https://hexy-time.now.sh/)
+# [Hexy Time](https://hexytime.now.sh/)
 
 > 🕘 Time as a color
 
